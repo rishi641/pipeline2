@@ -3,19 +3,34 @@ pipeline {
 agent any 
     stages { 
         stage ('Build') { 
-            echo "successfully build" 
+            step {
+                echo "successfully build"
+            }
+              
         }
-        stage ('Test') { 
-            echo "successfully tested"
+        stage ('Test') {
+            step {
+                echo "successfully tested"
+            } 
+            
         }
         stage ('QA') { 
-           echo "success"
+           step {
+                echo "successfully tested"
+            } 
+            
         }
         stage ('Deploy') { 
-          echo "deployed"
+         step {
+                echo "successfully tested"
+            } 
+            
         }
         stage ('Monitor') { 
-            echo "monitoring"
+            step {
+                echo "successfully tested"
+            } 
+            
          }
  
     }           
