@@ -1,10 +1,22 @@
-pipeline {
-   agent any
-   stages {
-    stage('Checkout') {
-      steps {
-            sh "mvn -version"
-       }
-    }
-  }
-}
+
+pipeline { 
+agent any 
+    stages { 
+        stage ('Build') { 
+            echo "successfully build" 
+        }
+        stage ('Test') { 
+            echo "successfully tested"
+        }
+        stage ('QA') { 
+           echo "success"
+        }
+        stage ('Deploy') { 
+          echo "deployed"
+        }
+        stage ('Monitor') { 
+            echo "monitoring"
+         }
+ 
+    }           
+ }
